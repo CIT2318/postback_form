@@ -1,20 +1,16 @@
 <?php 
 $msg;
-if(isset($_POST["answerBtn"]))
-{
-    $user_ans=$_POST["capital"];
-    if($user_ans===""){
-        $msg = "You need to answer the question";
-    }else{
-        if($user_ans==="Paris"){
-        	$msg = "You are correct";
-    	}else{
-    		$msg = "You are wrong";
-    	}
-    }
+$user_ans=$_POST["capital"];
+if($user_ans===""){
+    $msg = "You need to answer the question";
 }else{
-	$msg="You shouldn't have got to this page";
+    if($user_ans==="Paris"){
+        $msg = "You are correct";
+    }else{
+        $msg = "You are wrong";
+    }
 }
+
 
 
 ?>
