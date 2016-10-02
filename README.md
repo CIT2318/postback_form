@@ -1,5 +1,15 @@
 #'Postback' Forms
 
-1. Open *basic_concepts.php*. Answer the questions in comments in this file. 
-2. Have a look at *band_form.html* and *display_bands.php*. When the user enters selects a genre and submits the form, the details for all the bands that match the chosen genre should be displayed. You may find it useful to look at array_push (http://php.net/manual/en/function.array-push.php) as a way of storing bands that match the chosen genre.
-3. Add a text box to the form so that the user can enter a search term for the location of the band as well as selecting the genre e.g. a user might enter 'New York' and select 'hip-hop', the search results should then present 'The Wu-Tang Clan'. Have a look at using the strpos() (http://php.net/manual/en/function.strpos.php) function to help you search.
+Upload the two files to a web server. To use the application, open *postback.php*. This is a simple form processing example that is similar to the examples we looked at last week.
+
+* Can you create a 'postback' form i.e. a form that when submitted sends data back to the same page. Change the action attribute in postback.php to be like the following:-
+
+```html
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+```
+
+* View the source of the page in a web browser to what this PHP code outputs. 
+
+* Add some more PHP to *postback.php* that will test the user's answer and validate the form.
+
+* It's nice if we can re-populate the form with the user's data when the form is submitted. Have a look at the using the *value* attribute in HTML to achieve this. 
